@@ -9,22 +9,21 @@ import UIKit
 
 final class ListNotesViewController: UIViewController {
 
+    
+    private let newView = UIView()
+    
     public let tableView = UITableView()
-    private let searchField = UITextField()
-    private let loupe = UIImageView(image: UIImage(systemName: "magnifyingglass"))
     lazy private var heightCell = (tableView.frame.height / 9) - 1
     
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
         self.tableView.tableFooterView = UIView()
-//        setUpSearchField()
         setUpTableView()
-//        setUpLoup()
-        setUpNav()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,46 +50,12 @@ final class ListNotesViewController: UIViewController {
     
 //    MARK: - set up image of loup
     
-    private func setUpNav() {
-        
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
-        view.addSubview(navBar)
-
-        let navItem = UINavigationItem()
-        let doneItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: nil, action: #selector(addNotes))
-        
-        doneItem.tintColor = .black
-        navItem.rightBarButtonItem = doneItem
-        navBar.setItems([navItem], animated: false)
-    }
-    
-    private func setUpLoup() {
-
-        loupe.tintColor = .lightGray
-        view.addSubview(loupe)
-        loupe.translatesAutoresizingMaskIntoConstraints = false
-        loupe.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
-        loupe.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        loupe.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        loupe.heightAnchor.constraint(equalToConstant: 29).isActive = true
-    }
-
-    private func setUpSearchField() {
-        
-        searchField.textColor = .black
-        searchField.placeholder = " Search"
-        view.addSubview(searchField)
-        searchField.translatesAutoresizingMaskIntoConstraints = false
-        searchField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 47).isActive = true
-        searchField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        searchField.topAnchor.constraint(equalTo: view.topAnchor, constant: 55).isActive = true
-        searchField.heightAnchor.constraint(equalToConstant: 44).isActive = true
-    }
     
     private func setUpTableView() {
         
         tableView.layer.borderWidth = 0.2
         tableView.layer.cornerRadius = 8
+        tableView.layer.borderColor = CGColor(red: 0.474, green: 0.475, blue: 0.486, alpha: 1.0)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(Cell.self, forCellReuseIdentifier: "Cell")
@@ -99,12 +64,9 @@ final class ListNotesViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
     }
 }
-
-
-
 
 //           MARK: - UITableViewDelegate, UITableViewDataSource
 
@@ -146,9 +108,10 @@ extension ListNotesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let createVc = CreateNoteViewController()
+        
         NoteArray.numberSelectedCell = indexPath.row
-//        createVc.numberRow = indexPath.row
         navigationController?.pushViewController(CreateNoteViewController(), animated: true)
     }
 }
+
+

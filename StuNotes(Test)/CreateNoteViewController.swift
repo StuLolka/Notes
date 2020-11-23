@@ -9,11 +9,10 @@ import UIKit
 
 final class CreateNoteViewController: UIViewController {
     
-    @IBOutlet weak var saveBut: UIBarButtonItem!
     private let textView = UITextView()
     private let fontName = "Arial"
     private let fontSize: CGFloat = 23.0
-    public var defaultString = ""
+    private var defaultString = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
