@@ -1,8 +1,8 @@
 //
 //  Cell.swift
-//  Notes
+//  StuNotes(Test)
 //
-//  Created by Сэнди Белка on 21.11.2020.
+//  Created by Сэнди Белка on 23.11.2020.
 //
 
 import UIKit
@@ -10,23 +10,27 @@ import UIKit
 class Cell: UITableViewCell {
 //    lazy private var heightText =
     
-    private let name: UILabel = {
+    public var name: UILabel = {
         let label = UILabel()
 //        label.font = UIFont(name: "System", size: 20.0)
         label.font = .boldSystemFont(ofSize: 23.0)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Text Name Test"
         return label
     }()
-    private let date: UILabel = {
+    public var date: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = UIFont(name: "System", size: 15.0)
+        label.font = UIFont(name: "System", size: 14.5)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Text Date Test"
         return label
     }()
+    
+    func set(name: String, date: String) {
+        self.name.text = name
+        self.date.text = date
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

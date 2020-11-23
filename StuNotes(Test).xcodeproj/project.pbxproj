@@ -7,33 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		207BE12B256927C700E80F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE12A256927C700E80F1E /* AppDelegate.swift */; };
-		207BE12D256927C700E80F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE12C256927C700E80F1E /* SceneDelegate.swift */; };
-		207BE132256927C700E80F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BE130256927C700E80F1E /* Main.storyboard */; };
-		207BE135256927C700E80F1E /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 207BE133256927C700E80F1E /* Notes.xcdatamodeld */; };
-		207BE137256927C900E80F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207BE136256927C900E80F1E /* Assets.xcassets */; };
-		207BE13A256927C900E80F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207BE138256927C900E80F1E /* LaunchScreen.storyboard */; };
-		207BE14725692C5000E80F1E /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE14625692C5000E80F1E /* ListNotesViewController.swift */; };
-		207BE14A256935CB00E80F1E /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE149256935CB00E80F1E /* Cell.swift */; };
-		207BE1522569542B00E80F1E /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE1512569542B00E80F1E /* CreateNoteViewController.swift */; };
+		204C4D5B256BD7F80052E626 /* nameArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204C4D5A256BD7F80052E626 /* nameArray.swift */; };
+		20CB3637256BBE94005D50CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB3636256BBE94005D50CE /* AppDelegate.swift */; };
+		20CB3639256BBE94005D50CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB3638256BBE94005D50CE /* SceneDelegate.swift */; };
+		20CB363B256BBE94005D50CE /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB363A256BBE94005D50CE /* ListNotesViewController.swift */; };
+		20CB363E256BBE94005D50CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20CB363C256BBE94005D50CE /* Main.storyboard */; };
+		20CB3641256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20CB363F256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld */; };
+		20CB3643256BBE96005D50CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20CB3642256BBE96005D50CE /* Assets.xcassets */; };
+		20CB3646256BBE96005D50CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20CB3644256BBE96005D50CE /* LaunchScreen.storyboard */; };
+		20CB364F256BC33B005D50CE /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB364E256BC33B005D50CE /* CreateNoteViewController.swift */; };
+		20CB3653256BC8DE005D50CE /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB3652256BC8DE005D50CE /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		207BE127256927C700E80F1E /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		207BE12A256927C700E80F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		207BE12C256927C700E80F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		207BE131256927C700E80F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		207BE134256927C700E80F1E /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
-		207BE136256927C900E80F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		207BE139256927C900E80F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		207BE13B256927C900E80F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		207BE14625692C5000E80F1E /* ListNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
-		207BE149256935CB00E80F1E /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		207BE1512569542B00E80F1E /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		204C4D5A256BD7F80052E626 /* nameArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameArray.swift; sourceTree = "<group>"; };
+		20CB3633256BBE94005D50CE /* StuNotes(Test).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StuNotes(Test).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CB3636256BBE94005D50CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20CB3638256BBE94005D50CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		20CB363A256BBE94005D50CE /* ListNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
+		20CB363D256BBE94005D50CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20CB3640256BBE94005D50CE /* StuNotes_Test_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StuNotes_Test_.xcdatamodel; sourceTree = "<group>"; };
+		20CB3642256BBE96005D50CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20CB3645256BBE96005D50CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20CB3647256BBE96005D50CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20CB364E256BC33B005D50CE /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		20CB3652256BC8DE005D50CE /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		207BE124256927C700E80F1E /* Frameworks */ = {
+		20CB3630256BBE94005D50CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,74 +45,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		207BE11E256927C700E80F1E = {
+		20CB362A256BBE94005D50CE = {
 			isa = PBXGroup;
 			children = (
-				207BE129256927C700E80F1E /* Notes */,
-				207BE128256927C700E80F1E /* Products */,
+				20CB3635256BBE94005D50CE /* StuNotes(Test) */,
+				20CB3634256BBE94005D50CE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		207BE128256927C700E80F1E /* Products */ = {
+		20CB3634256BBE94005D50CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				207BE127256927C700E80F1E /* Notes.app */,
+				20CB3633256BBE94005D50CE /* StuNotes(Test).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		207BE129256927C700E80F1E /* Notes */ = {
+		20CB3635256BBE94005D50CE /* StuNotes(Test) */ = {
 			isa = PBXGroup;
 			children = (
-				207BE12A256927C700E80F1E /* AppDelegate.swift */,
-				207BE12C256927C700E80F1E /* SceneDelegate.swift */,
-				207BE130256927C700E80F1E /* Main.storyboard */,
-				207BE14625692C5000E80F1E /* ListNotesViewController.swift */,
-				207BE1512569542B00E80F1E /* CreateNoteViewController.swift */,
-				207BE149256935CB00E80F1E /* Cell.swift */,
-				207BE136256927C900E80F1E /* Assets.xcassets */,
-				207BE138256927C900E80F1E /* LaunchScreen.storyboard */,
-				207BE13B256927C900E80F1E /* Info.plist */,
-				207BE133256927C700E80F1E /* Notes.xcdatamodeld */,
+				20CB363C256BBE94005D50CE /* Main.storyboard */,
+				20CB3636256BBE94005D50CE /* AppDelegate.swift */,
+				20CB3638256BBE94005D50CE /* SceneDelegate.swift */,
+				20CB363A256BBE94005D50CE /* ListNotesViewController.swift */,
+				204C4D5A256BD7F80052E626 /* nameArray.swift */,
+				20CB364E256BC33B005D50CE /* CreateNoteViewController.swift */,
+				20CB3642256BBE96005D50CE /* Assets.xcassets */,
+				20CB3644256BBE96005D50CE /* LaunchScreen.storyboard */,
+				20CB3647256BBE96005D50CE /* Info.plist */,
+				20CB363F256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld */,
+				20CB3652256BC8DE005D50CE /* Cell.swift */,
 			);
-			path = Notes;
+			path = "StuNotes(Test)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		207BE126256927C700E80F1E /* Notes */ = {
+		20CB3632256BBE94005D50CE /* StuNotes(Test) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 207BE13E256927C900E80F1E /* Build configuration list for PBXNativeTarget "Notes" */;
+			buildConfigurationList = 20CB364A256BBE96005D50CE /* Build configuration list for PBXNativeTarget "StuNotes(Test)" */;
 			buildPhases = (
-				207BE123256927C700E80F1E /* Sources */,
-				207BE124256927C700E80F1E /* Frameworks */,
-				207BE125256927C700E80F1E /* Resources */,
+				20CB362F256BBE94005D50CE /* Sources */,
+				20CB3630256BBE94005D50CE /* Frameworks */,
+				20CB3631256BBE94005D50CE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Notes;
-			productName = Notes;
-			productReference = 207BE127256927C700E80F1E /* Notes.app */;
+			name = "StuNotes(Test)";
+			productName = "StuNotes(Test)";
+			productReference = 20CB3633256BBE94005D50CE /* StuNotes(Test).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		207BE11F256927C700E80F1E /* Project object */ = {
+		20CB362B256BBE94005D50CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					207BE126256927C700E80F1E = {
+					20CB3632256BBE94005D50CE = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = 207BE122256927C700E80F1E /* Build configuration list for PBXProject "Notes" */;
+			buildConfigurationList = 20CB362E256BBE94005D50CE /* Build configuration list for PBXProject "StuNotes(Test)" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,58 +121,59 @@
 				en,
 				Base,
 			);
-			mainGroup = 207BE11E256927C700E80F1E;
-			productRefGroup = 207BE128256927C700E80F1E /* Products */;
+			mainGroup = 20CB362A256BBE94005D50CE;
+			productRefGroup = 20CB3634256BBE94005D50CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				207BE126256927C700E80F1E /* Notes */,
+				20CB3632256BBE94005D50CE /* StuNotes(Test) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		207BE125256927C700E80F1E /* Resources */ = {
+		20CB3631256BBE94005D50CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207BE13A256927C900E80F1E /* LaunchScreen.storyboard in Resources */,
-				207BE137256927C900E80F1E /* Assets.xcassets in Resources */,
-				207BE132256927C700E80F1E /* Main.storyboard in Resources */,
+				20CB3646256BBE96005D50CE /* LaunchScreen.storyboard in Resources */,
+				20CB3643256BBE96005D50CE /* Assets.xcassets in Resources */,
+				20CB363E256BBE94005D50CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		207BE123256927C700E80F1E /* Sources */ = {
+		20CB362F256BBE94005D50CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207BE14725692C5000E80F1E /* ListNotesViewController.swift in Sources */,
-				207BE12B256927C700E80F1E /* AppDelegate.swift in Sources */,
-				207BE12D256927C700E80F1E /* SceneDelegate.swift in Sources */,
-				207BE135256927C700E80F1E /* Notes.xcdatamodeld in Sources */,
-				207BE1522569542B00E80F1E /* CreateNoteViewController.swift in Sources */,
-				207BE14A256935CB00E80F1E /* Cell.swift in Sources */,
+				20CB363B256BBE94005D50CE /* ListNotesViewController.swift in Sources */,
+				204C4D5B256BD7F80052E626 /* nameArray.swift in Sources */,
+				20CB3637256BBE94005D50CE /* AppDelegate.swift in Sources */,
+				20CB3641256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld in Sources */,
+				20CB364F256BC33B005D50CE /* CreateNoteViewController.swift in Sources */,
+				20CB3639256BBE94005D50CE /* SceneDelegate.swift in Sources */,
+				20CB3653256BC8DE005D50CE /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		207BE130256927C700E80F1E /* Main.storyboard */ = {
+		20CB363C256BBE94005D50CE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				207BE131256927C700E80F1E /* Base */,
+				20CB363D256BBE94005D50CE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		207BE138256927C900E80F1E /* LaunchScreen.storyboard */ = {
+		20CB3644256BBE96005D50CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				207BE139256927C900E80F1E /* Base */,
+				20CB3645256BBE96005D50CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -177,7 +181,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		207BE13C256927C900E80F1E /* Debug */ = {
+		20CB3648256BBE96005D50CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +242,7 @@
 			};
 			name = Debug;
 		};
-		207BE13D256927C900E80F1E /* Release */ = {
+		20CB3649256BBE96005D50CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,38 +297,38 @@
 			};
 			name = Release;
 		};
-		207BE13F256927C900E80F1E /* Debug */ = {
+		20CB364B256BBE96005D50CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QHPV38N7M5;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = "StuNotes(Test)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Stu.Notes;
+				PRODUCT_BUNDLE_IDENTIFIER = "Stu.StuNotes-Test-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		207BE140256927C900E80F1E /* Release */ = {
+		20CB364C256BBE96005D50CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QHPV38N7M5;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = "StuNotes(Test)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Stu.Notes;
+				PRODUCT_BUNDLE_IDENTIFIER = "Stu.StuNotes-Test-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,20 +338,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		207BE122256927C700E80F1E /* Build configuration list for PBXProject "Notes" */ = {
+		20CB362E256BBE94005D50CE /* Build configuration list for PBXProject "StuNotes(Test)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				207BE13C256927C900E80F1E /* Debug */,
-				207BE13D256927C900E80F1E /* Release */,
+				20CB3648256BBE96005D50CE /* Debug */,
+				20CB3649256BBE96005D50CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		207BE13E256927C900E80F1E /* Build configuration list for PBXNativeTarget "Notes" */ = {
+		20CB364A256BBE96005D50CE /* Build configuration list for PBXNativeTarget "StuNotes(Test)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				207BE13F256927C900E80F1E /* Debug */,
-				207BE140256927C900E80F1E /* Release */,
+				20CB364B256BBE96005D50CE /* Debug */,
+				20CB364C256BBE96005D50CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -355,17 +359,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		207BE133256927C700E80F1E /* Notes.xcdatamodeld */ = {
+		20CB363F256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				207BE134256927C700E80F1E /* Notes.xcdatamodel */,
+				20CB3640256BBE94005D50CE /* StuNotes_Test_.xcdatamodel */,
 			);
-			currentVersion = 207BE134256927C700E80F1E /* Notes.xcdatamodel */;
-			path = Notes.xcdatamodeld;
+			currentVersion = 20CB3640256BBE94005D50CE /* StuNotes_Test_.xcdatamodel */;
+			path = StuNotes_Test_.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 207BE11F256927C700E80F1E /* Project object */;
+	rootObject = 20CB362B256BBE94005D50CE /* Project object */;
 }
