@@ -6,16 +6,19 @@
 //
 
 import UIKit
+import CoreData
 
 final class ListNotesViewController: UIViewController {
 
     
     private let newView = UIView()
+    private var isJustRun = true
     
     public let tableView = UITableView()
     lazy private var heightCell = (tableView.frame.height / 9) - 1
     
-    
+    lazy private var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy private var context = appDelegate.persistentContainer.viewContext
     
     override func viewDidLoad() {
         
@@ -28,27 +31,20 @@ final class ListNotesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        test()
-        NoteArray.numberSelectedCell = -1
-    }
-        
-    @objc func test() {
+        if isJustRun {
+            let fetchRequest: NSFetchRequest<Notes> = Notes.fetchRequest()
+            
+            do {
+                NoteArray.notesArray = try context.fetch(fetchRequest).reversed()
+            } catch {
+            }
+            
+            isJustRun = false
+        }
         
         tableView.reloadData()
+        NoteArray.numberSelectedCell = -1
     }
-    
-    
-
-    
-    @objc func addNotes() {
-        
-        let vc = CreateNoteViewController()
-        vc.modalPresentationStyle = .formSheet
-        self.present(vc, animated:true, completion:nil)
-    }
-    
-    
-//    MARK: - set up image of loup
     
     
     private func setUpTableView() {
@@ -68,13 +64,13 @@ final class ListNotesViewController: UIViewController {
     }
 }
 
+
 //           MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension ListNotesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return nameArray.count
-        return NoteArray.nameArray.count
+        return NoteArray.notesArray.count
     }
     
     
@@ -86,7 +82,8 @@ extension ListNotesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? Cell {
-            cell.set(name: NoteArray.nameArray[indexPath.row], date: NoteArray.dateArray[indexPath.row])
+            let note = NoteArray.notesArray[indexPath.row]
+            cell.set(name: note.name ?? "error", date: note.date ?? "error")
             return cell
         }
         else {
@@ -99,11 +96,18 @@ extension ListNotesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
-            NoteArray.nameArray.remove(at: indexPath.row)
-            NoteArray.wholeNote.remove(at: indexPath.row)
-            NoteArray.dateArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let noteNeedDelete = NoteArray.notesArray[indexPath.row]
+            context.delete(noteNeedDelete)
+            
+            do {
+                try context.save()
+                NoteArray.notesArray.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                print("error delete")
+            }
         }
     }
     

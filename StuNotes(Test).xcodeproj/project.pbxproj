@@ -70,11 +70,11 @@
 				20CB363A256BBE94005D50CE /* ListNotesViewController.swift */,
 				204C4D5A256BD7F80052E626 /* nameArray.swift */,
 				20CB364E256BC33B005D50CE /* CreateNoteViewController.swift */,
+				20CB3652256BC8DE005D50CE /* Cell.swift */,
 				20CB3642256BBE96005D50CE /* Assets.xcassets */,
 				20CB3644256BBE96005D50CE /* LaunchScreen.storyboard */,
 				20CB3647256BBE96005D50CE /* Info.plist */,
 				20CB363F256BBE94005D50CE /* StuNotes_Test_.xcdatamodeld */,
-				20CB3652256BC8DE005D50CE /* Cell.swift */,
 			);
 			path = "StuNotes(Test)";
 			sourceTree = "<group>";

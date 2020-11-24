@@ -7,17 +7,16 @@
 
 import UIKit
 
-class Cell: UITableViewCell {
-//    lazy private var heightText =
-    
+final class Cell: UITableViewCell {
+
     public var name: UILabel = {
         let label = UILabel()
-//        label.font = UIFont(name: "System", size: 20.0)
-        label.font = .boldSystemFont(ofSize: 23.0)
+        label.font = .boldSystemFont(ofSize: 22.5)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
     public var date: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -26,6 +25,7 @@ class Cell: UITableViewCell {
         label.text = "Text Date Test"
         return label
     }()
+    
     
     func set(name: String, date: String) {
         self.name.text = name
@@ -63,8 +63,6 @@ class Cell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

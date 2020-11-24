@@ -6,24 +6,20 @@
 //
 
 import UIKit
+import CoreData
 
 final class CreateNoteViewController: UIViewController {
     
     private let textView = UITextView()
-    private let fontName = "Arial"
-    private let fontSize: CGFloat = 23.0
     private var defaultString = ""
 
+    lazy private var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy private var context = appDelegate.persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        forTextView()
+        setUpTableView()
         crutch()
-    }
-    
-//      MARK: - I want to be straight with you - it's a crutch.
-    private func crutch() {
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButton))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,15 +29,21 @@ final class CreateNoteViewController: UIViewController {
         }
     }
     
-
-    private func getNote() {
+//      MARK: - I want to be straight with you - it's a crutch.
+    private func crutch() {
         
-        textView.text = NoteArray.wholeNote[NoteArray.numberSelectedCell]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButton))
     }
     
-    private func forTextView(){
+    private func getNote() {
         
-        textView.font = UIFont.init(name: fontName, size: fontSize)
+        let text = NoteArray.notesArray[NoteArray.numberSelectedCell]
+        textView.text = text.note ?? "error"
+    }
+    
+    private func setUpTableView() {
+        
+        textView.font = UIFont.init(name: "Arial", size: 23.0)
         view.addSubview(textView)
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
@@ -54,31 +56,18 @@ final class CreateNoteViewController: UIViewController {
         
         defaultString = textView.text
         if NoteArray.numberSelectedCell == -1 {
-            
-            NoteArray.wholeNote.insert(defaultString, at: 0)
-            NoteArray.dateArray.insert(getDate(), at: 0)
             if let indexEnter = defaultString.firstIndex(of: "\n") {
                 defaultString = String(defaultString.prefix(upTo: indexEnter))
             }
-            NoteArray.nameArray.insert(defaultString, at: 0)
+            
+            saveNote(name: defaultString, note: textView.text, date: getDate())
         }
         else {
-            
-            NoteArray.wholeNote[NoteArray.numberSelectedCell] = defaultString
-            NoteArray.dateArray[NoteArray.numberSelectedCell] = getDate()
-            if let indexEnter = defaultString.firstIndex(of: "\n") {
-                defaultString = String(defaultString.prefix(upTo: indexEnter))
-            }
-            NoteArray.nameArray[NoteArray.numberSelectedCell] = defaultString
-            
-            NoteArray.nameArray.insert(NoteArray.nameArray[NoteArray.numberSelectedCell], at: 0)
-            NoteArray.wholeNote.insert(NoteArray.wholeNote[NoteArray.numberSelectedCell], at: 0)
-            NoteArray.dateArray.insert(NoteArray.dateArray[NoteArray.numberSelectedCell], at: 0)
-            
-            NoteArray.nameArray.remove(at: NoteArray.numberSelectedCell + 1)
-            NoteArray.wholeNote.remove(at: NoteArray.numberSelectedCell + 1)
-            NoteArray.dateArray.remove(at: NoteArray.numberSelectedCell + 1)
+
+            saveNote(name: defaultString, note: textView.text, date: getDate())
+            deleteNoteAfterEdit(with: NoteArray.numberSelectedCell + 1)
         }
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -89,6 +78,37 @@ final class CreateNoteViewController: UIViewController {
         
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         return formatter.string(from: date)
+    }
+    
+//     MARK: - save and dalete note
+    private func saveNote(name: String, note: String, date: String) {
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Notes", in: context)
+        let notesObj = NSManagedObject(entity: entity!, insertInto: context) as! Notes
+        
+        notesObj.name = name
+        notesObj.note = note
+        notesObj.date = date
+        
+        do {
+            try context.save()
+            NoteArray.notesArray.insert(notesObj, at: 0)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func deleteNoteAfterEdit(with number: Int) {
+        
+        let noteNeedDelete = NoteArray.notesArray[number]
+        context.delete(noteNeedDelete)
+        
+        do {
+            try context.save()
+            NoteArray.notesArray.remove(at: number)
+        } catch {
+            print("error delete")
+        }
     }
     
 }
