@@ -7,11 +7,9 @@ Application also supports two appearances (light and dark).
 <img src="https://github.com/StuLolka/Notes/blob/main/forReadme/screenInterface1.jpg" width="235" height="400">
 
 
-![Screenshot](forReadme/screenInterface1.jpg){:height="400px" width="200"}
-
-
 # Using
 
-![Screenshot](forReadme/screenAdd1.jpg)
+<img src="https://github.com/StuLolka/Notes/blob/main/forReadme/screenAdd1.jpg" width="235" height="400">
 
-![Screenshot](forReadme/screenDelete1.jpg)
+<img src="https://github.com/StuLolka/Notes/blob/main/forReadme/screenDelete1.jpg" width="235" height="400">
+
