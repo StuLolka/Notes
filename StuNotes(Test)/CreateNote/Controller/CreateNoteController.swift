@@ -1,59 +1,32 @@
 //
-//  CreateNoteViewController.swift
+//  CreateNoteController.swift
 //  StuNotes(Test)
 //
-//  Created by Сэнди Белка on 23.11.2020.
+//  Created by Сэнди Белка on 17.04.2021.
 //
 
 import UIKit
 import CoreData
 
-final class CreateNoteViewController: UIViewController {
+final public class CreateNoteController {
     
-    private let textView = UITextView()
-    private var defaultString = ""
-
-    lazy private var appDelegate = UIApplication.shared.delegate as! AppDelegate
-    lazy private var context = appDelegate.persistentContainer.viewContext
+    private let textView: UITextView
+    private let context: NSManagedObjectContext
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpTableView()
-        crutch()
+    init(textView: UITextView, context: NSManagedObjectContext) {
+        self.textView = textView
+        self.context = context
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        if NoteArray.numberSelectedCell != -1 {
-            getNote()
-        }
-    }
-    
-//      MARK: - I want to be straight with you - it's a crutch.
-    private func crutch() {
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButton))
-    }
-    
-    private func getNote() {
+    public func getNote() {
         
         let text = NoteArray.notesArray[NoteArray.numberSelectedCell]
-        textView.text = text.note ?? "error"
+        guard let textNote = text.note else {return }
+        textView.text = textNote
     }
     
-    private func setUpTableView() {
-        
-        textView.font = UIFont.init(name: "Arial", size: 23.0)
-        view.addSubview(textView)
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        textView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-        textView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        textView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-    }
-    
-    @IBAction func saveButton(_ sender: UIBarButtonItem) {
-        
+    public func saveNoteButton() {
+        var defaultString = ""
         defaultString = textView.text
         if NoteArray.numberSelectedCell == -1 {
             if let indexEnter = defaultString.firstIndex(of: "\n") {
@@ -67,8 +40,6 @@ final class CreateNoteViewController: UIViewController {
             saveNote(name: defaultString, note: textView.text, date: getDate())
             deleteNoteAfterEdit(with: NoteArray.numberSelectedCell + 1)
         }
-        
-        navigationController?.popViewController(animated: true)
     }
     
     private func getDate() -> String {
@@ -110,6 +81,4 @@ final class CreateNoteViewController: UIViewController {
             print("error delete")
         }
     }
-    
 }
-

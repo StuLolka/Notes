@@ -11,7 +11,9 @@ final class Cell: UITableViewCell {
 
     public var name: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 22.5)
+        label.font = .boldSystemFont(ofSize: 50)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.8
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -20,9 +22,10 @@ final class Cell: UITableViewCell {
     public var date: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = UIFont(name: "System", size: 14.5)
+        label.font = .systemFont(ofSize: 18.5)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Text Date Test"
         return label
     }()
     
@@ -48,13 +51,13 @@ final class Cell: UITableViewCell {
         
         name.leftAnchor.constraint(equalTo: leftAnchor, constant: 15).isActive = true
         name.rightAnchor.constraint(equalTo: rightAnchor, constant: -5).isActive = true
-        name.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        name.heightAnchor.constraint(equalToConstant: frame.height / 2 - -10).isActive = true
+        name.bottomAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        name.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
         
         date.leftAnchor.constraint(equalTo: leftAnchor, constant: 15).isActive = true
         date.rightAnchor.constraint(equalTo: rightAnchor, constant: -5).isActive = true
-        date.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        date.heightAnchor.constraint(equalToConstant: frame.height / 2 - 10).isActive = true
+        date.topAnchor.constraint(equalTo: centerYAnchor, constant: 10).isActive = true
+        date.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
     }
 
     override func awakeFromNib() {
