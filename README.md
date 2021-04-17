@@ -2,7 +2,7 @@
 
 This app is completely my work.
 
-<img src="https://github.com/StuLolka/Notes/blob/main/forReadme/all.png" width="500" height="335">
+<img src="https://github.com/StuLolka/Notes/blob/main/forReadme/all.png" width="600" height="435">
 
 Application supports Core Data. All your notes will be saved.
 Application also supports two appearances (light and dark). 
