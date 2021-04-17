@@ -1,6 +1,10 @@
 # Notes
 
-This app is completely my work. 
+This app is completely my work.
+
+<img src="https://github.com/StuLolka/Notes/blob/main/forReadme/all.png">
+
+
 Application supports Core Data. All your notes will be saved.
 Application also supports two appearances (light and dark). 
 
