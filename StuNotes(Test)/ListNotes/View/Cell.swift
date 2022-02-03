@@ -1,15 +1,8 @@
-//
-//  Cell.swift
-//  StuNotes(Test)
-//
-//  Created by Сэнди Белка on 23.11.2020.
-//
-
 import UIKit
 
 final class Cell: UITableViewCell {
 
-    public var name: UILabel = {
+    lazy var name: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 50)
         label.adjustsFontSizeToFitWidth = true
@@ -19,7 +12,7 @@ final class Cell: UITableViewCell {
         return label
     }()
     
-    public var date: UILabel = {
+    lazy var date: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 18.5)

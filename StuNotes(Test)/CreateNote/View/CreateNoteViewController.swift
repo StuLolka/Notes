@@ -1,10 +1,3 @@
-//
-//  CreateNoteViewController.swift
-//  StuNotes(Test)
-//
-//  Created by Сэнди Белка on 23.11.2020.
-//
-
 import UIKit
 import CoreData
 
@@ -14,7 +7,6 @@ final class CreateNoteViewController: UIViewController {
 
     lazy private var appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy private var context = appDelegate.persistentContainer.viewContext
-    
     lazy private var controller = CreateNoteController(textView: textView, context: context)
     
     override func viewDidLoad() {
@@ -26,6 +18,7 @@ final class CreateNoteViewController: UIViewController {
         else {
             view.backgroundColor = .white
         }
+        
         setUpTableView()
         setUpSaveButton()
     }

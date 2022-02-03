@@ -1,10 +1,3 @@
-//
-//  CreateNoteController.swift
-//  StuNotes(Test)
-//
-//  Created by Сэнди Белка on 17.04.2021.
-//
-
 import UIKit
 import CoreData
 
@@ -18,14 +11,14 @@ final public class CreateNoteController {
         self.context = context
     }
     
-    public func getNote() {
+    func getNote() {
         
         let text = NoteArray.notesArray[NoteArray.numberSelectedCell]
         guard let textNote = text.note else {return }
         textView.text = textNote
     }
     
-    public func saveNoteButton() {
+    func saveNoteButton() {
         var defaultString = ""
         defaultString = textView.text
         if NoteArray.numberSelectedCell == -1 {
@@ -36,7 +29,6 @@ final public class CreateNoteController {
             saveNote(name: defaultString, note: textView.text, date: getDate())
         }
         else {
-
             saveNote(name: defaultString, note: textView.text, date: getDate())
             deleteNoteAfterEdit(with: NoteArray.numberSelectedCell + 1)
         }
